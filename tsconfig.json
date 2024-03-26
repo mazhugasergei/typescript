@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"target": "ESNext",
+		"noEmit": true,
+		"incremental": true,
+
+		"module": "CommonJS",
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+
+		"strict": true,
+		"isolatedModules": true
+	},
+
+	"exclude": ["node_modules"]
+}
