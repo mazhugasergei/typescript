@@ -1,12 +1,17 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["./*"]
+		},
 		"noEmit": true,
 		"incremental": true,
 
 		"module": "CommonJS",
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true,
+		"declaration": true,
 
 		"strict": true,
 		"isolatedModules": true

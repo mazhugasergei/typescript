@@ -1,5 +1,7 @@
 {
-  "devDependencies": {
-    "@types/node": "^20.11.30"
-  }
+	"name": "meth",
+	"version": "0.1.0",
+	"devDependencies": {
+		"@types/node": "^20.11.30"
+	}
 }
