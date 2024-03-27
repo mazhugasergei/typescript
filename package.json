@@ -1,7 +1,8 @@
 {
-	"name": "meth",
-	"version": "0.1.0",
-	"devDependencies": {
-		"@types/node": "^20.11.30"
+	"name": "notomath",
+	"main": "index.js",
+	"version": "1.0.5",
+	"scripts": {
+		"build": "rm -rf lib && tsc && cp package.json lib && cp README.md lib"
 	}
 }

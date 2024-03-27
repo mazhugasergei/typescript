@@ -1,21 +1,24 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
+		"types": ["node"],
+
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./*"]
+			"@/*": ["./src/*"]
 		},
-		"noEmit": true,
-		"incremental": true,
 
-		"module": "CommonJS",
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"declaration": true,
+		"strict": true, // doesn't allow many bad things (Turning this on is equivalent to enabling all of the strict mode family options, which are outlined in https://www.typescriptlang.org/tsconfig#strict)
+		"noUncheckedIndexedAccess": true, // doesn't allow things like: const numbers: number[] = []; const num: number = numbers[0]; // type of numbers[0] is number | undefined
+		"skipLibCheck": true, // doesn't check for types in .d.ts files
+		"esModuleInterop": true, // allows importing from CommonJS file using `import`
+		"allowSyntheticDefaultImports": true, // allows `import foo from "foo"` instead of `import * as foo from "foo"`
 
-		"strict": true,
-		"isolatedModules": true
+		"module": "CommonJS", // specifies the module system to be used in the compiled project
+		"outDir": "lib",
+		"declaration": true // generates .d.ts files
 	},
 
-	"exclude": ["node_modules"]
+	"include": ["src/**/*"],
+	"exclude": ["node_modules", "lib", "tests"]
 }
